@@ -7,6 +7,8 @@
 - Extra: Runnable also by building the docker image and running the container from the Dockerfile provided
 - Extra: Added swagger documentation accessible at store/products/swagger
 
+Note: the portal will be accessible at port 8080, whereas the back-end APIs can be accessed via 8081 at store/products incase of postman API testing
+
 ## Libraries/technologies used
 
 1. Node.JS/Nest.JS
