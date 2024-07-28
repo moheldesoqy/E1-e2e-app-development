@@ -1,0 +1,27 @@
+# version: '2.29.1'
+
+# services:
+#   app:
+#     build:
+#       context: .
+#       dockerfile: Dockerfile
+#     ports:
+#       - "8080:8080"
+version: '2.29.1'
+
+services:
+  e1-e2e-app-development-backend:
+    build:
+      context: ./e1-e2e-app-development-backend
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8081"
+
+  portal:
+    build:
+      context: ./portal
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      -  e1-e2e-app-development-backend

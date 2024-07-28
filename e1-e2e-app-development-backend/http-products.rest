@@ -1,0 +1,43 @@
+
+@hostname = localhost
+@port = 8080
+@host = {{hostname}}:{{port}}
+@commonPath = store/products
+@baseUrl = http://{{host}}/{{commonPath}}
+
+###
+### List of products
+###
+GET {{baseUrl}}
+
+###
+### Singular product details
+###
+GET {{baseUrl}}/66a2b800d0805232fa930bf3
+
+###
+### Add product
+###
+POST {{baseUrl}}
+{
+    "name": "test product",
+    "price": 1.5,
+    "description": "test description",
+    "imageUrl": "testurl.com"
+}
+
+###
+### Update product
+###
+PATCH {{baseUrl}}/66a2b800d0805232fa930bf3
+{
+    "name": "test product 2",
+    "price": 1.5,
+    "description": "test description",
+    "imageUrl": "testurl.com"
+}
+
+###
+### Delete product
+###
+DELETE {{baseUrl}}/:id

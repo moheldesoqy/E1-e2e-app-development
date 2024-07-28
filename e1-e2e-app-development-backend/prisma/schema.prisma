@@ -1,0 +1,17 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["linux-musl-arm64-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = "mongodb+srv://mohammedosama779:cFcVlZW5UhbPeS2a@cluster0.2mt2zbq.mongodb.net/KIB-exercise-1-db?retryWrites=true&w=majority&appName=Cluster0" //usually in the env, but for the exercise it'll be publicized
+}
+
+model Product {
+  id          String @id @default(auto()) @map("_id") @db.ObjectId
+  name        String
+  price       Int
+  description String
+  imageUrl    String
+}
