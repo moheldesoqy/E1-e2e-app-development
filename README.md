@@ -1,7 +1,7 @@
 ## Exercise description - First exercise
 
 - Includes two folders, one for the back-end, and another for a simple CRUD portal to interact with the APIs
-- Utilized MongoDB as the NoSQL Database for the exercise, with the public Database URL accessible from the environment file
+- Utilized MongoDB as the NoSQL Database for the exercise, with the public Database URL accessible from the prisma schema file
 - Utilized Prisma's ORM to connect to my MongoDB database and define the schema for the CRUD operations
 - Runnable using docker-compose up by building the docker-compose.yml
 - Extra: Runnable also by building the docker image and running the container from the Dockerfile provided
